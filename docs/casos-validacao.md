@@ -35,7 +35,7 @@ detecta é assinatura cinemática, não mecanismo de dano.
 | B1 | 8 out. 2023 | Balticconnector (gasoduto) + cabos de telecom FI–EE | *Newnew Polar Bear*, Hong Kong | Âncora recuperada no fundo | Tratado como acidental pela parte chinesa |
 | B2 | 17 nov. 2024 | BCS East-West Interlink (SE–LT) | *Yi Peng 3*, China | — | Sem atribuição conclusiva |
 | B3 | 18 nov. 2024 | C-Lion1 (FI–DE) | *Yi Peng 3*, China | — | Sem atribuição conclusiva |
-| B4 | 25 dez. 2024 | Estlink 2 + 4 cabos de telecom (Golfo da Finlândia) | *Eagle S*, Ilhas Cook | ~90 km | **Tribunal Distrital de Helsinque, 3 out. 2025: extinção por falta de jurisdição** — fatos ocorridos na ZEE finlandesa, fora do mar territorial; jurisdição do Estado de bandeira ou dos Estados de nacionalidade dos réus. Estado condenado a ~195 mil € em custas. Cabível recurso |
+| B4 | 25 dez. 2024 | Estlink 2 + 4 cabos de telecom (Golfo da Finlândia) | *Eagle S*, Ilhas Cook | ~90 km | **Tribunal Distrital de Helsinque, 3 out. 2025: extinção por falta de jurisdição** — fatos ocorridos na ZEE finlandesa, fora do mar territorial; jurisdição do Estado de bandeira ou dos Estados de nacionalidade dos réus. Estado condenado a ~195 mil € em custas. **O tribunal consignou ainda que a perda da âncora decorreu de falha técnica, sem dolo nem negligência grave**, embora a acusação sustentasse que o estado de manutenção tornava o evento previsível. **Ministério Público recorreu; pendente no Tribunal de Apelação de Helsinque** (situação em ago. 2026) |
 | B5 | 26 jan. 2025 | Cabo de fibra Gotland (SE) – Ventspils (LV) | *Vezhen*, Malta (operação búlgara) | — | **Ministério Público sueco, 3 fev. 2025: acidental.** Dos três dispositivos de segurança da âncora, dois estavam inoperantes havia tempo; o terceiro cedeu ao impacto de uma onda às 04h11 de 25 jan. Âncora caiu sem ação da tripulação. Navio liberado |
 | B6 | 31 dez. 2025 | Cabo de dados Elisa FI–EE (Golfo da Finlândia) | *Fitburg*, São Vicente e Granadinas; São Petersburgo → Haifa | "Várias dezenas de km"; âncora encontrada arriada a bordo | NBI (mar. 2026): dano causado pela âncora, na **ZEE da Estônia**. Investigação concluída em jun. 2026 com 4 indiciados — dano qualificado, tentativa de dano qualificado e interferência qualificada em telecomunicações; 3 sob proibição de saída |
 | B7 | 26 jan. 2026 | Cabo de fibra Letônia–Gotland | Não identificada | — | Em investigação (OTAN + polícia) |
@@ -56,17 +56,26 @@ Considerados apenas os casos que chegaram a uma decisão:
 
 - **B5 (Vezhen):** acidental, com **causa mecânica identificada** — falha em
   dois de três dispositivos de retenção da âncora, somada a mar grosso.
-- **B4 (Eagle S):** mérito **nunca examinado** — extinto por falta de
-  jurisdição, por ter ocorrido na ZEE e não no mar territorial.
+- **B4 (Eagle S):** extinto por falta de jurisdição, por ter ocorrido na ZEE e
+  não no mar territorial — e, adicionalmente, com **falha técnica** consignada
+  como causa da perda da âncora, sem dolo nem negligência grave. Sob recurso.
 - **A3 (Silver Dania):** liberado por ausência de indícios.
 - **C1 (Hong Tai 58):** **única condenação** — e ocorreu em águas sob
   jurisdição plena do Estado costeiro, não em ZEE.
 
 Isto é evidência empírica direta para dois capítulos:
 
-**Para o Capítulo 7 (falsos positivos).** O caso Vezhen é o confundidor perfeito
-e não estava na lista original de confundidores: **falha mecânica do sistema de
-retenção da âncora em mar grosso**. A assinatura cinemática resultante — âncora
+**Para o Capítulo 7 (falsos positivos).** O confundidor que não estava na lista
+original é a **falha mecânica do sistema de retenção da âncora** — e ele não
+aparece em um caso, mas em dois. O caso *Vezhen* foi arquivado pelo Ministério
+Público sueco por falha de dois de três dispositivos de retenção em mar grosso;
+e no caso *Eagle S* o tribunal finlandês consignou igualmente falha técnica,
+sem dolo nem negligência grave. **Dois dos casos mais visíveis do conjunto,
+apreciados por autoridades distintas em jurisdições distintas, foram
+qualificados como acidentais por defeito de equipamento.** Isso é suporte
+empírico direto ao teto de precisão independente de sensor — com a ressalva de
+que ambas as qualificações se deram sob ônus probatório penal e uma delas está
+sob recurso. A assinatura cinemática resultante — âncora
 no fundo, arrasto sobre o traçado, velocidade reduzida — é *indistinguível* de
 arrasto deliberado por qualquer sensor remoto, porque é fisicamente o mesmo
 fenômeno. A diferença está inteiramente a bordo. Acrescentar à seção 7.3 como
