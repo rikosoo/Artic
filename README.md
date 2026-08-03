@@ -73,7 +73,7 @@ Antes da primeira compilação é preciso baixar `referencias/abnt.csl` — ver
 | 6 Revisita | Redigido | ~2.000 |
 | 7 Falsos positivos | Redigido | ~2.600 |
 | 8 Rótulos e validação | Redigido | ~2.100 |
-| 9 Resultados | Esqueleto | — |
+| 9 Resultados | Estrutura sem valores | ~1.400 |
 | 10 Discussão | Esqueleto | — |
 | 11 Conclusão | Esqueleto | — |
 
@@ -132,3 +132,6 @@ categorias deve chegar à qualificação como está.
 - `docs/casos-validacao.md` — incidentes de 2021 a 2026 com data, embarcação,
   bandeira e desfecho jurídico; avaliação de viabilidade de cada caso para
   validação *leave-one-event-out*.
+- `docs/pre-registro.md` — plano de análise a congelar **antes** do primeiro
+  contato com os eventos reais: unidade, desfechos, estratos, critérios de
+  exclusão, sete expectativas registradas e o que não será afirmado.
