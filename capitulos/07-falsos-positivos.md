@@ -16,6 +16,21 @@ comportamento "anômalo" é também a explicação inocente mais comum — e que
 também produz dano. Discutir se a distinção é necessária para prevenção
 (não é) ou para atribuição (é). -->
 
+## Falha mecânica do sistema de retenção da âncora
+<!-- CONFUNDIDOR DE PRIMEIRA ORDEM — identificado a partir do caso Vezhen
+(jan. 2025). O Ministério Público sueco arquivou o caso como acidental: dois
+dos três dispositivos de retenção estavam inoperantes havia tempo e o terceiro
+cedeu ao impacto de uma onda; a âncora caiu sem ação da tripulação.
+
+Ponto crítico para o argumento: a assinatura resultante é FISICAMENTE IDÊNTICA
+à de arrasto deliberado — não parecida, idêntica —, porque é o mesmo fenômeno.
+Nenhum sensor remoto pode separá-las; a diferença está inteiramente a bordo.
+Avaliações de inteligência de jan. 2025 generalizaram essa leitura: tripulações
+inexperientes em navios mal mantidos, sem evidência de direção estatal.
+
+Consequência: este confundidor estabelece um teto de precisão independente de
+sensor, análogo ao teto de revocação do Cap. 6. Vale enunciá-lo como resultado. -->
+
 ## Demais confundidores legítimos
 <!-- Desvio por gelo; capeamento e redução de velocidade por mau tempo; espera
 de praticagem; operação científica (reboque de sensor, perfilagem); manutenção
