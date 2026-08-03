@@ -42,8 +42,9 @@ referencias/             referencias.bib e estilo de citação
 docs/                    Planejamento e conjunto de casos
 ```
 
-Capítulos não redigidos contêm o esqueleto de seções com as decisões
-metodológicas registradas em comentários HTML — invisíveis no PDF compilado.
+Todos os capítulos estão redigidos, com exceção do Capítulo 9, que especifica
+figuras, tabelas e expectativas registradas mas não contém valores medidos — o
+processamento ainda não foi executado.
 
 ## Compilação
 
@@ -75,7 +76,7 @@ Antes da primeira compilação é preciso baixar `referencias/abnt.csl` — ver
 | 8 Rótulos e validação | Redigido | ~2.100 |
 | 9 Resultados | Estrutura sem valores | ~1.400 |
 | 10 Discussão | Redigido | ~2.100 |
-| 11 Conclusão | Esqueleto | — |
+| 11 Conclusão | Redigido | ~1.100 |
 
 ## Decisões já tomadas
 
