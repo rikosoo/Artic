@@ -69,8 +69,8 @@ Antes da primeira compilação é preciso baixar `referencias/abnt.csl` — ver
 | 2 Fundamentação | Redigido | ~3.700 |
 | 3 Dados | Redigido | ~3.100 |
 | 4 Método | Redigido | ~3.000 |
-| 5 Clutter de gelo | Esqueleto | — |
-| 6 Revisita | Esqueleto | — |
+| 5 Clutter de gelo | Redigido | ~2.100 |
+| 6 Revisita | Redigido | ~2.000 |
 | 7 Falsos positivos | Esqueleto | — |
 | 8 Rótulos e validação | Esqueleto | — |
 | 9 Resultados | Esqueleto | — |
