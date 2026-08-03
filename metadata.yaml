@@ -1,0 +1,26 @@
+---
+title: "Detecção de assinaturas cinemáticas compatíveis com arrasto de âncora sobre cabos submarinos árticos por fusão SAR–AIS"
+subtitle: "Corredores de risco condicionados por batimetria, degradação por clutter de gelo e os limites da inferência sob taxa base extrema"
+author: "Henrique"
+date: "2026"
+lang: pt-BR
+documentclass: report
+papersize: a4
+fontsize: 12pt
+geometry:
+  - top=3cm
+  - left=3cm
+  - right=2cm
+  - bottom=2cm
+linestretch: 1.5
+toc: true
+toc-depth: 3
+number-sections: true
+link-citations: true
+bibliography: referencias/referencias.bib
+csl: referencias/abnt.csl
+figPrefix: ["Figura", "Figuras"]
+tblPrefix: ["Tabela", "Tabelas"]
+eqnPrefix: ["Equação", "Equações"]
+secPrefix: ["Seção", "Seções"]
+---

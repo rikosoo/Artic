@@ -1,0 +1,11 @@
+build/
+dados/bruto/*
+dados/processado/*
+!dados/**/.gitkeep
+*.SAFE/
+*.zip
+*.tif
+*.nc
+__pycache__/
+.venv/
+.ipynb_checkpoints/
