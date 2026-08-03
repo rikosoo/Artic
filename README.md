@@ -74,7 +74,7 @@ Antes da primeira compilação é preciso baixar `referencias/abnt.csl` — ver
 | 7 Falsos positivos | Redigido | ~2.600 |
 | 8 Rótulos e validação | Redigido | ~2.100 |
 | 9 Resultados | Estrutura sem valores | ~1.400 |
-| 10 Discussão | Esqueleto | — |
+| 10 Discussão | Redigido | ~2.100 |
 | 11 Conclusão | Esqueleto | — |
 
 ## Decisões já tomadas
