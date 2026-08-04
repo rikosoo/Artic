@@ -5,7 +5,7 @@ Projeto de mestrado. Dissertação escrita em Markdown e compilada via pandoc.
 **O sistema não detecta sabotagem.** Detecta assinatura cinemática compatível
 com arrasto de âncora — condição necessária e largamente insuficiente para
 caracterizar ato deliberado. O enquadramento está fixado na seção 1.6 e
-atravessa todo o texto.
+atravessa todo o texto, inclusive títulos de figuras e legendas.
 
 ## Argumento
 
@@ -29,6 +29,38 @@ Daí a forma da saída: uma **razão de verossimilhança** com a evidência que 
 compõe, não um rótulo. O sistema estima a força da evidência; não estima a
 probabilidade a priori, e não finge estimar (§4.6).
 
+**Conclusão do trabalho:** a fusão SAR–AIS permite produzir evidência de
+atribuição com força mensurável, e não permite detecção confiável de eventos
+isolados. A aplicação natural é retrospectiva e dirigida.
+
+## Resultados analíticos já estabelecidos
+
+Derivados no texto, independentes de processamento — e portanto já defensáveis
+em qualificação:
+
+- **Intervalos heterogêneos entre passagens reduzem a captura** (§6.3). Por
+  concavidade de `min(D, g)`, `P_capt ≤ min(D/E[g], 1)`: citar revisita média
+  superestima a cobertura, e o erro cresce com o agrupamento — que cresce com a
+  latitude. O ganho de revisita polar é, em parte, ilusório.
+- **Peso de evidência exigido** (§7.3). Com chance a priori de ~10⁻⁴, levar a
+  posterior a 1 exige `Λ ≈ 10⁴`. Converte a taxa base de obstáculo em
+  especificação de projeto.
+- **Teto de precisão independente de sensor** (§7.4, §10.3). A falha mecânica de
+  retenção da âncora produz assinatura *idêntica*, não semelhante, à do arrasto
+  deliberado. Dois dos casos mais visíveis — *Vezhen* e *Eagle S* — foram
+  qualificados como acidentais por defeito de equipamento, em jurisdições
+  distintas.
+- **Todos os incidentes documentados são do regime cooperativo** (§6.5). As
+  embarcações transmitiam AIS e foram identificadas por ele. O regime não
+  cooperativo, em que o SAR seria o detector primário, não tem um único caso que
+  o instancie.
+- **A precisão não pode ser medida** (§8.1). Com seis eventos, é calculada a
+  partir de revocação e densidade de falso alarme, estimadas de fontes distintas.
+- **Onde as contribuições 1 e 2 se encontram** (§7.5).
+  `E[FP] ≈ λ_fa × A_ef × N_pass`. O corredor reduz `A_ef` sem remover eventos
+  genuínos, elevando a prevalência na região observada — mais eficaz que
+  refinar o classificador.
+
 ## Estrutura
 
 ```
@@ -39,12 +71,8 @@ dados/bruto/             Dados baixados — NÃO versionado
 dados/processado/        Produtos intermediários — NÃO versionado
 codigo/                  Pipeline de processamento
 referencias/             referencias.bib e estilo de citação
-docs/                    Planejamento e conjunto de casos
+docs/                    Planejamento, casos de validação e pré-registro
 ```
-
-Todos os capítulos estão redigidos, com exceção do Capítulo 9, que especifica
-figuras, tabelas e expectativas registradas mas não contém valores medidos — o
-processamento ainda não foi executado.
 
 ## Compilação
 
@@ -55,7 +83,7 @@ make tex      # build/dissertacao.tex (ponto de partida para migrar a abnTeX2)
 make contagem # contagem de palavras por capítulo
 ```
 
-O Capítulo 4 usa notação matemática em LaTeX, o que torna o alvo `pdf`
+Os capítulos 4 a 10 usam notação matemática em LaTeX, o que torna o alvo `pdf`
 dependente de xelatex. A exportação `docx` converte as equações para OMML e é
 adequada para revisão.
 
@@ -64,24 +92,32 @@ Antes da primeira compilação é preciso baixar `referencias/abnt.csl` — ver
 
 ## Estado
 
+Texto completo: **~24.900 palavras**, 47 entradas bibliográficas.
+
 | Capítulo | Estado | Palavras |
 |---|---|---|
-| 1 Introdução | Redigido | ~2.000 |
-| 2 Fundamentação | Redigido | ~3.700 |
-| 3 Dados | Redigido | ~3.100 |
-| 4 Método | Redigido | ~3.000 |
-| 5 Clutter de gelo | Redigido | ~2.100 |
-| 6 Revisita | Redigido | ~2.000 |
-| 7 Falsos positivos | Redigido | ~2.600 |
-| 8 Rótulos e validação | Redigido | ~2.100 |
-| 9 Resultados | Estrutura sem valores | ~1.400 |
-| 10 Discussão | Redigido | ~2.100 |
-| 11 Conclusão | Redigido | ~1.100 |
+| 1 Introdução | Redigido | 2.024 |
+| 2 Fundamentação | Redigido | 3.698 |
+| 3 Dados | Redigido | 3.096 |
+| 4 Método | Redigido | 2.991 |
+| 5 Clutter de gelo | Redigido | 2.066 |
+| 6 Revisita | Redigido | 2.025 |
+| 7 Falsos positivos | Redigido | 2.622 |
+| 8 Rótulos e validação | Redigido | 1.768 |
+| 9 Resultados | **Estrutura sem valores** | 1.590 |
+| 10 Discussão | Redigido | 1.892 |
+| 11 Conclusão | Redigido | 1.137 |
+
+O Capítulo 9 especifica 21 figuras e 10 tabelas com eixos, unidades e
+expectativas registradas, mas **não contém valores medidos** — o processamento
+não foi executado. Quando os dados existirem, é preenchimento, não redação.
 
 ## Decisões já tomadas
 
 Registradas aqui porque não são óbvias a partir do texto e não devem ser
 revisitadas por esquecimento.
+
+**Dados e recorte**
 
 - **Dois domínios** (§3.1). Báltico como domínio de calibração — é onde estão os
   eventos documentados; Ártico como domínio alvo. A diferença de desempenho
@@ -92,47 +128,88 @@ revisitadas por esquecimento.
 - **AIS pelos acervos nacionais**, não pela Global Fishing Watch (§3.4). Os
   produtos públicos da GFW são agregados; o AIS bruto subjacente é comercial e
   não redistribuível. As fontes primárias são os acervos históricos abertos da
-  autoridade marítima dinamarquesa e da administração costeira norueguesa.
+  autoridade marítima dinamarquesa e da administração costeira norueguesa —
+  com seleção prévia por recorte, dado o volume (centenas de GB/ano).
 - **Traçados de cabo por KIS-ORCA / EMODnet**, não por TeleGeography (§3.4),
   cujo mapa é esquemático e não representa a geometria real no fundo.
 - **Sem filtragem de speckle antes da detecção** (§3.7). O filtro altera a
   estatística do fundo, que é exatamente o objeto de medida do Capítulo 5.
+
+**Método**
+
 - **Cinemática fora do campo espacial de risco** (§4.4). `R(x)` é propriedade do
   lugar; cinemática é propriedade da trajetória. Separadas para permitir ablação.
-- **Avaliação por precisão–revocação e custo ponderado.** Acurácia e ROC-AUC
-  excluídas com justificativa (cap. 7): sob desbalanceamento extremo, a
-  especificidade domina a ROC e produz curvas excelentes para sistemas inúteis.
+- **Profundidade derivada, não postulada** (§4.4.3). Função de sobrevivência de
+  `L/s` sobre a frota que transita no corredor. Os números conhecidos situam a
+  profundidade de fundeio de projeto em 80–100 m, bem abaixo dos 200 m usuais.
+- **Correção de azimute por modelo direto** (§4.3). Desloca-se a posição prevista
+  do candidato AIS, não a detecção SAR. Ignorar isso fabrica embarcações escuras.
+- **Saída em razão de verossimilhança, não rótulo** (§4.6).
+
+**Avaliação**
+
+- **Unidade de análise: o trânsito** pelo suporte de `R(x)` (§7.1). Cena e
+  detecção foram rejeitadas, com motivo.
+- **Precisão–revocação e custo ponderado.** Acurácia e ROC-AUC excluídas com
+  justificativa (§7.7) — e a exclusão faz parte do pré-registro.
+- **Vento como eixo de estratificação** (§5.2). Sem ele, a degradação atribuída
+  ao gelo fica confundida com estado de mar.
+- **Células de controle** para o rótulo negativo (§5.2). Sem elas, falso alarme
+  por gelo e embarcação escura são indistinguíveis.
+- **Custo de falso negativo = perda de evidência de atribuição**, não custo do
+  dano (§7.6). O sistema não previne.
+- **Pré-registro do plano de análise** antes do contato com os eventos reais
+  (§8.5).
 
 ## Pendências que travam trabalho
 
 1. **Verificação de viabilidade** (§3.5) — contagem de cenas por modo, revisita
    efetiva, cobertura AIS, fração do corredor em profundidade operável e
    densidade de tráfego, para cada recorte candidato. Tem critérios de rejeição
-   explícitos; se um recorte falhar, **muda-se a área, não o método**. É o portão
-   do mês 12 do cronograma e deve ser executado antes de qualquer processamento.
-2. **Extensão geográfica e profundidade de histórico** dos dois acervos de AIS,
+   explícitos; se um recorte falhar, **muda-se a área, não o método**. Deve ser
+   executada antes de qualquer processamento, e seu resultado é a Tabela 9.1.
+2. **Congelar o pré-registro.** Marcar `docs/pre-registro.md` com uma tag git
+   (p. ex. `pre-registro-v1`) para que a data seja verificável e independa de
+   memória. Depois disso, só emendas datadas.
+3. **Extensão geográfica e profundidade de histórico** dos dois acervos de AIS,
    frente aos corredores escolhidos. Deles depende a viabilidade do casamento.
-3. **Fontes primárias dos incidentes** — entradas marcadas `% SUBSTITUIR` no
-   `.bib`. Prioridade para o acórdão do caso *Eagle S* e a decisão de
-   arquivamento do caso *Vezhen*, que sustentam argumento e não apenas contexto.
-4. **Norma de sociedade classificadora sobre amarra** (§4.4.3). A derivação da
+4. **Fontes primárias dos incidentes** — 6 entradas `% SUBSTITUIR` no `.bib`.
+   Prioridade para o acórdão do caso *Eagle S* e a decisão de arquivamento do
+   caso *Vezhen*: sustentam argumento, não apenas contexto.
+5. **Norma de sociedade classificadora sobre amarra** (§4.4.3). A derivação da
    componente de profundidade se apoia em comprimento de amarra e relação de
-   amarra, hoje referenciados a partir de fontes secundárias.
+   amarra, hoje referenciados a partir de fontes secundárias. Atenção à
+   distinção entre a relação para *fundeio seguro* (5:1 a 7:1, documentada) e a
+   suficiente para *arrasto capaz de causar dano* (menor e não estabelecida).
+
+## Acompanhar
+
+- **Recurso no caso *Eagle S*.** O Ministério Público finlandês recorreu da
+  decisão de outubro de 2025; pendente no Tribunal de Apelação de Helsinque, sem
+  desfecho conhecido em agosto de 2026. **A §10.2 depende do resultado** e pode
+  precisar de atualização antes do depósito.
+- **Novos incidentes.** `docs/casos-validacao.md` cobre até janeiro de 2026;
+  cada novo caso amplia o conjunto de validação e o denominador da taxa base.
 
 ## Verificação bibliográfica
 
-As entradas do `.bib` marcadas `% VERIFICAR` têm metadados preenchidos de
-memória e precisam ser conferidas contra a fonte. As marcadas `% SUBSTITUIR`
-apoiam-se em fontes secundárias e precisam da fonte primária. Nenhuma das duas
-categorias deve chegar à qualificação como está.
+Convenção de marcação no `.bib`:
+
+- `% VERIFICAR` (20 entradas) — metadados preenchidos de memória; conferir
+  contra a fonte.
+- `% SUBSTITUIR` (6 entradas) — apoiadas em fontes secundárias; obter a fonte
+  primária.
+
+Nenhuma das duas categorias deve chegar à qualificação como está.
 
 ## Documentos de apoio
 
-- `docs/estrutura-dissertacao.md` — estrutura completa, recorte para artigo,
-  cronograma de 24 meses e análise de riscos.
+- `docs/estrutura-dissertacao.md` — estrutura completa, títulos candidatos,
+  recorte para artigo, cronograma de 24 meses e análise de riscos.
 - `docs/casos-validacao.md` — incidentes de 2021 a 2026 com data, embarcação,
   bandeira e desfecho jurídico; avaliação de viabilidade de cada caso para
-  validação *leave-one-event-out*.
+  validação *leave-one-event-out*; e as fontes primárias a obter.
 - `docs/pre-registro.md` — plano de análise a congelar **antes** do primeiro
   contato com os eventos reais: unidade, desfechos, estratos, critérios de
-  exclusão, sete expectativas registradas e o que não será afirmado.
+  exclusão, sete expectativas registradas com o que sua refutação implicaria, e
+  o que não será afirmado.
