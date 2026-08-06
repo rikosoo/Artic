@@ -9,3 +9,4 @@ dados/processado/*
 __pycache__/
 .venv/
 .ipynb_checkpoints/
+referencias/abnt.csl

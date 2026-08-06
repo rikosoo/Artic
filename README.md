@@ -90,6 +90,9 @@ adequada para revisão.
 Antes da primeira compilação é preciso baixar `referencias/abnt.csl` — ver
 `referencias/LEIA-ME.md`.
 
+Instalação das dependências, edição, citações e problemas comuns:
+`docs/como-usar.md`.
+
 ## Estado
 
 Texto completo: **~24.900 palavras**, 47 entradas bibliográficas.
@@ -209,6 +212,8 @@ Nenhuma das duas categorias deve chegar à qualificação como está.
 - `docs/casos-validacao.md` — incidentes de 2021 a 2026 com data, embarcação,
   bandeira e desfecho jurídico; avaliação de viabilidade de cada caso para
   validação *leave-one-event-out*; e as fontes primárias a obter.
+- `docs/como-usar.md` — instalação, compilação, convenções de edição e
+  problemas comuns; escrito para quem clona o repositório pela primeira vez.
 - `docs/pre-registro.md` — plano de análise a congelar **antes** do primeiro
   contato com os eventos reais: unidade, desfechos, estratos, critérios de
   exclusão, sete expectativas registradas com o que sua refutação implicaria, e
