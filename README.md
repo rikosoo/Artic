@@ -60,6 +60,11 @@ em qualificação:
   `E[FP] ≈ λ_fa × A_ef × N_pass`. O corredor reduz `A_ef` sem remover eventos
   genuínos, elevando a prevalência na região observada — mais eficaz que
   refinar o classificador.
+- **Satélite não substitui cabo** (§1.3). Cabos carregam 95–99 % do tráfego
+  intercontinental; a capacidade agregada da maior constelação em órbita baixa
+  é comparável à de um único par de fibras de um cabo transatlântico moderno. E
+  substituir cabo por constelação transfere a dependência para um serviço único
+  de operador privado estrangeiro — troca de vulnerabilidade, não redução.
 
 ## Estrutura
 
@@ -92,11 +97,11 @@ Antes da primeira compilação é preciso baixar `referencias/abnt.csl` — ver
 
 ## Estado
 
-Texto completo: **~24.900 palavras**, 47 entradas bibliográficas.
+Texto completo: **~25.700 palavras**, 55 entradas bibliográficas.
 
 | Capítulo | Estado | Palavras |
 |---|---|---|
-| 1 Introdução | Redigido | 2.024 |
+| 1 Introdução | Redigido | 2.554 |
 | 2 Fundamentação | Redigido | 3.698 |
 | 3 Dados | Redigido | 3.096 |
 | 4 Método | Redigido | 2.991 |
@@ -106,7 +111,7 @@ Texto completo: **~24.900 palavras**, 47 entradas bibliográficas.
 | 8 Rótulos e validação | Redigido | 1.768 |
 | 9 Resultados | **Estrutura sem valores** | 1.590 |
 | 10 Discussão | Redigido | 1.892 |
-| 11 Conclusão | Redigido | 1.137 |
+| 11 Conclusão | Redigido | 1.382 |
 
 O Capítulo 9 especifica 21 figuras e 10 tabelas com eixos, unidades e
 expectativas registradas, mas **não contém valores medidos** — o processamento
