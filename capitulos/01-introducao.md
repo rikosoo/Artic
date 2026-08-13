@@ -42,13 +42,73 @@ enterrado ou revestido com armação metálica [@carter2009].
 O Ártico deixou de ser periférico nessa geografia. A retração progressiva do
 gelo marinho tornou economicamente viáveis rotas de cabo transárticas que
 encurtam substancialmente a latência entre Europa e Ásia em relação às rotas
-convencionais pelo Canal de Suez, e vários projetos nesse sentido estão em
-implantação ou em fase avançada de planejamento. A mesma retração ampliou a
-navegabilidade das rotas marítimas do Nordeste e do Noroeste, com aumento
-correspondente do tráfego mercante. As duas tendências convergem
-geograficamente: o mesmo afinamento de gelo que viabiliza o cabo viabiliza o
-navio que pode danificá-lo, e ambos se concentram nos mesmos corredores rasos e
-estreitos, junto às aproximações costeiras.
+convencionais, e dois sistemas de grande porte estão em implantação: o *Polar
+Express*, ao longo da costa ártica russa, com cerca de 12 650 km e capacidade
+projetada da ordem de dezenas a uma centena de terabits por segundo, com
+segmentos entrando em serviço a partir de 2026; e o *Far North Fiber*, de
+aproximadamente 17 000 km, ligando Japão e Europa pela passagem noroeste com
+aterragens no Alasca, no Ártico canadense, na Groenlândia, na Noruega, na
+Finlândia e na Irlanda [@subnet_polarexpress; @subnet_farnorthfiber].
+
+A mesma retração ampliou a navegabilidade das rotas marítimas do Nordeste e do
+Noroeste, com aumento correspondente do tráfego mercante. As duas tendências
+convergem geograficamente: o mesmo afinamento de gelo que viabiliza o cabo
+viabiliza o navio que pode danificá-lo, e ambos se concentram nos mesmos
+corredores rasos e estreitos, junto às aproximações costeiras. O ativo a
+proteger, portanto, está sendo instalado agora, e no mesmo espaço em que a
+ameaça cresce.
+
+## Satélite não substitui cabo
+
+Uma objeção natural ao problema assim formulado é que a conectividade por
+satélite em órbita baixa teria tornado os cabos menos críticos — e o Ártico
+seria, à primeira vista, o caso em que essa substituição mais faria sentido,
+dada a dificuldade e o custo de instalar e reparar cabos na região. A objeção
+merece resposta explícita, porque, se procedesse, esvaziaria a motivação do
+trabalho.
+
+Ela procede em parte, e é importante reconhecer onde. Para conectividade
+*local* em alta latitude, as constelações em órbita baixa representam uma
+mudança qualitativa: comunidades e embarcações árticas que dependiam de enlaces
+geoestacionários com latência acima de meio segundo passaram a dispor de
+latências de algumas dezenas de milissegundos. A cobertura polar, inicialmente
+limitada, foi estendida por planos orbitais de alta inclinação e por malhas de
+enlaces ópticos entre satélites, que dispensam estações terrestres em território
+remoto — exatamente a limitação que tornava a alta latitude difícil de servir
+[@starlink_polar].
+
+Ela não procede, contudo, para o tráfego que motiva este trabalho, e a diferença
+é de ordens de grandeza:
+
+| | Cabos submarinos | Constelações em órbita baixa |
+|---|---|---|
+| Participação no tráfego intercontinental | 95 % a 99 % | resíduo |
+| Sistemas em serviço | ~570, mais de 1 milhão de km | poucas constelações |
+| Capacidade agregada | milhares de Tbit/s | dezenas de Tbit/s |
+
+A comparação mais expressiva é pontual: a capacidade reivindicada para a maior
+constelação em órbita baixa em operação é da ordem de algumas dezenas de
+terabits por segundo — comparável à de **um único par de fibras** de um cabo
+transatlântico moderno [@subseacables_porque]. Projeções de crescimento
+apontam para valores substancialmente maiores ao longo desta década, mas
+projeções não são capacidade instalada, e a distância a cobrir permanece de duas
+a três ordens de grandeza.
+
+Há ainda um argumento que, em um trabalho sobre segurança de infraestrutura,
+pesa mais que a capacidade. Substituir um cabo por uma constelação não elimina a
+dependência: transfere-a de um ativo físico sob jurisdição costeira compartilhada
+para um serviço único, operado por um ator privado estrangeiro, cuja
+disponibilidade depende de decisões comerciais e políticas alheias ao Estado
+servido. Do ponto de vista de resiliência, isso é uma troca de vulnerabilidade,
+não uma redução — e episódios recentes de suspensão seletiva de serviço em zonas
+de conflito ilustram a natureza do risco.
+
+A conclusão é que satélite e cabo são complementares e não substitutos: o
+primeiro resolve o acesso na ponta e a redundância de emergência; o segundo
+carrega o volume. O crescimento da conectividade em órbita baixa **não** reduz a
+criticidade dos cabos árticos que estão sendo instalados — e, ao viabilizar mais
+atividade econômica e mais tráfego na região, contribui indiretamente para
+aumentar a exposição.
 
 ## O problema
 

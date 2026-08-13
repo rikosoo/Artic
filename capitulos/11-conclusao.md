@@ -81,12 +81,37 @@ tecnicamente tratado, mas sem um único caso documentado que o instancie.
 
 ## Trabalhos futuros
 
-**Constelações comerciais de alta revisita.** O teto do Capítulo 6 fornece a
-métrica exata para avaliar o que se ganharia com acesso a constelações SAR de
-revisita substancialmente maior. A questão a responder não é se o ganho existe,
-mas se ele desloca o fator limitante: se, no regime não cooperativo, a cadência
-deixar de dominar o classificador, o esforço se realoca. O modelo já está
-formulado de modo a responder isso sem refazer o trabalho.
+**Constelações comerciais de alta revisita.** É o desdobramento com efeito mais
+direto sobre os resultados deste trabalho, e o modelo do Capítulo 6 já está
+formulado para avaliá-lo sem refazer nada.
+
+As constelações SAR comerciais em banda X operam hoje em regime muito distinto
+do da missão pública usada aqui: frotas de dezenas de satélites com tempos de
+revisita anunciados de poucas horas — e, em alguns casos e faixas de latitude,
+inferiores a uma hora [@umbra_eoportal; @capella_const; @iceye_fleet]. A
+comparação com a duração dos eventos é o ponto: se a duração característica de
+um arrasto está na faixa de poucas a algumas horas, e a cadência de observação
+cai para essa mesma ordem ou abaixo dela, então $P_{capt}$ satura e **o teto do
+Capítulo 6 deixa de ser o fator limitante no regime não cooperativo**. A
+pergunta se desloca de "o evento foi observado?" para "o que foi observado
+permite classificar?", que é o domínio dos Capítulos 5 e 7.
+
+Duas ressalvas impedem tratar isso como solução. A primeira é que essas
+constelações operam por **tarefamento pago**, o que rompe a premissa de dados
+inteiramente públicos adotada no Capítulo 3 — com consequências para
+reprodutibilidade e para quem pode operar o sistema. A segunda é que tarefamento
+exige saber **onde e quando** apontar, o que um acervo de aquisição sistemática
+dispensa.
+
+E é justamente aí que as contribuições se articulam: a Contribuição 1 reduz a
+área de interesse em ordens de grandeza, e a Contribuição 3 identifica as
+janelas temporais em que a cobertura sistemática é mais fraca. Juntas, elas
+transformam tarefamento comercial de inviável em dimensionável — porque o custo
+de tarefamento escala com área e com número de aquisições, que são exatamente as
+duas grandezas que o corredor e o modelo de captura reduzem. **A combinação
+entre corredor condicionado por batimetria e tarefamento comercial dirigido é,
+provavelmente, o caminho mais curto para ultrapassar o teto de revisita**, e
+merece ser avaliada quantitativamente com o instrumental já construído.
 
 **Polarimetria completa.** A separabilidade entre superfície metálica e gelo
 deformado foi avaliada aqui apenas pela razão entre dois canais, limitada pelo
