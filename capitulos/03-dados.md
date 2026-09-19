@@ -66,7 +66,7 @@ o recorte ártico puro não ofereceria.
 Dois candidatos, a decidir na verificação de viabilidade descrita adiante:
 
 **(a) Enlace Svalbard–continente.** Corresponde ao único incidente ártico
-razoavelmente documentado (Capítulo 8, caso A2) e tem trechos rasos junto às
+razoavelmente documentado [@nupi_svalbard] (Capítulo 8, caso A2) e tem trechos rasos junto às
 duas extremidades, com o trecho intermediário em profundidade que o exclui do
 corredor de risco — o que, por si só, é uma boa demonstração do poder de
 recorte da Contribuição 1. A desvantagem é o tráfego escasso, que torna a
@@ -127,7 +127,7 @@ instrumento de atribuição.
 ### Sentinel-1
 
 O acervo é obtido pelo *Copernicus Data Space Ecosystem*, que sucedeu o portal
-anterior de distribuição e oferece catálogo e acesso programático. Adotam-se
+anterior de distribuição e oferece catálogo e acesso programático [@cdse]. Adotam-se
 produtos GRD, cujo espaçamento de pixel é de aproximadamente 10 m no modo IW e
 40 m no modo EW, com resolução efetiva correspondentemente mais grosseira que o
 espaçamento em ambos os casos.
@@ -152,7 +152,7 @@ que a organização utiliza são de origem comercial e não podem ser
 redistribuídos livremente; o que se publica são produtos **agregados** —
 esforço aparente de pesca em grade, eventos de pesca e de transbordo, consultas
 por API para fins não comerciais — além de um conjunto anonimizado e rotulado
-destinado a treinar classificadores. Esses produtos são excelentes para
+destinado a treinar classificadores [@gfw_dados]. Esses produtos são excelentes para
 caracterizar padrões de atividade e serão usados com essa finalidade, mas o
 casamento SAR–AIS do Capítulo 4 exige posição, rumo e velocidade por embarcação
 e por instante, e nenhum produto em grade atende a isso. O AISHub, por sua vez,
@@ -164,11 +164,11 @@ são os **acervos nacionais de AIS histórico**, ambos abertos e sem registro:
 
 - a **autoridade marítima dinamarquesa** disponibiliza AIS histórico em arquivos
   CSV de acesso livre, com histórico que remonta a mais de uma década e
-  cobertura que alcança o Báltico ocidental e parte do central;
+  cobertura que alcança o Báltico ocidental e parte do central [@dma_ais];
 - a **administração costeira norueguesa** disponibiliza AIS histórico para águas
   norueguesas sob a licença norueguesa para dados públicos abertos, com serviço
-  dedicado de consulta histórica — cobrindo a costa ártica e, portanto, o
-  domínio alvo.
+  dedicado de consulta histórica [@kystverket_ais] — cobrindo a costa ártica e,
+  portanto, o domínio alvo.
 
 A combinação cobre os dois domínios no nível de mensagem e sem barreira de
 acesso. Há um custo prático a dimensionar desde já: o acervo dinamarquês
@@ -193,9 +193,9 @@ recepção que não têm relação com o fenômeno de interesse.
 
 Para o domínio de calibração, adota-se **EMODnet Bathymetry**, cuja grade para
 mares europeus é substancialmente mais fina que a global e incorpora
-levantamentos hidrográficos nacionais. Para o domínio alvo, adota-se **GEBCO**,
+levantamentos hidrográficos nacionais [@emodnet_bathy]. Para o domínio alvo, adota-se **GEBCO**,
 cuja componente ártica deriva em larga medida da carta batimétrica internacional
-do Oceano Ártico.
+do Oceano Ártico [@gebco2024; @ibcao].
 
 A resolução nominal da grade GEBCO é de 15 segundos de arco, o que corresponde a
 células de aproximadamente 460 m na direção norte–sul e, em latitudes árticas,
@@ -237,7 +237,8 @@ reportando precisão fictícia.
 
 Adotam-se duas fontes complementares, pelas razões de escala discutidas no
 Capítulo 2. Como variável contínua de estratificação, a concentração derivada do
-radiômetro AMSR2 pelo algoritmo ASI, cuja grade de aproximadamente 3 km é a
+radiômetro AMSR2 pelo algoritmo ASI [@amsr2_asi], cuja grade de aproximadamente
+3 km é a
 melhor resolução operacionalmente disponível em micro-ondas passivas e reduz —
 sem eliminar — a incompatibilidade de escala com a imagem SAR. Como referência
 de tipo de gelo e posição da borda, as cartas de gelo operacionais dos serviços
@@ -254,7 +255,7 @@ textura extraídos da própria cena.
 
 A reanálise ERA5, distribuída pelo *Climate Data Store*, fornece vento a 10 m e
 parâmetros de estado de mar em passo horário e resolução de aproximadamente
-31 km. O uso é duplo: estratificar o desempenho do detector por condição de
+31 km [@era5]. O uso é duplo: estratificar o desempenho do detector por condição de
 vento, conforme exigido pela seção 2.1, e sustentar a discussão do confundidor
 "redução de velocidade por mau tempo" no Capítulo 7 — inclusive no caso
 *Vezhen*, cuja causa oficial envolve o impacto de uma onda em horário

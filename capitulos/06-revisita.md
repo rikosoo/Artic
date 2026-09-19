@@ -27,7 +27,7 @@ horas antes ou depois não observa nada.
 
 Formalmente, decompõe-se
 
-$$P_{det} = \mathbb{E}_{T_0, D}\left[ 1 - \prod_{i\,:\, t_i \in [T_0,\, T_0 + D]} \big(1 - p_i\big) \right],$$
+$$P_{\mathrm{det}} = \mathbb{E}_{T_0, D}\left[ 1 - \prod_{i\,:\, t_i \in [T_0,\, T_0 + D]} \big(1 - p_i\big) \right],$$
 
 onde $T_0$ é o instante de início do evento, $D$ sua duração, $\{t_i\}$ a
 sequência de instantes de aquisição sobre o corredor, e $p_i$ a probabilidade
@@ -68,7 +68,7 @@ evento inicia dentro do intervalo $g_k$ com probabilidade proporcional a $g_k$,
 e, uma vez dentro dele, é capturado por ao menos uma passagem se e somente se
 começar a menos de $D$ do fim do intervalo. Segue
 
-$$P_{capt}(D) \;=\; \frac{\sum_k \min(D,\, g_k)}{\sum_k g_k}.$$
+$$P_{\mathrm{capt}}(D) \;=\; \frac{\sum_k \min(D,\, g_k)}{\sum_k g_k}.$$
 
 A expressão é exata e não exige hipótese distribucional sobre as passagens.
 
@@ -76,7 +76,7 @@ A expressão é exata e não exige hipótese distribucional sobre as passagens.
 
 Se todos os intervalos fossem iguais a $\bar g$, o resultado se reduziria a
 
-$$P_{capt}(D) = \min\!\left(\frac{D}{\bar g},\, 1\right),$$
+$$P_{\mathrm{capt}}(D) = \min\!\left(\frac{D}{\bar g},\, 1\right),$$
 
 isto é, a razão entre duração do evento e revisita, saturando em um. É esta a
 forma que a intuição sugere e que justificaria citar uma "revisita média" como
@@ -84,7 +84,7 @@ descritor suficiente de cobertura.
 
 Ela é otimista. Como $\min(D, g)$ é côncava em $g$, a desigualdade de Jensen dá
 
-$$P_{capt}(D) \;=\; \frac{\mathbb{E}[\min(D, g)]}{\mathbb{E}[g]} \;\le\; \min\!\left(\frac{D}{\mathbb{E}[g]},\, 1\right).$$
+$$P_{\mathrm{capt}}(D) \;=\; \frac{\mathbb{E}[\min(D, g)]}{\mathbb{E}[g]} \;\le\; \min\!\left(\frac{D}{\mathbb{E}[g]},\, 1\right).$$
 
 **Para uma mesma revisita média, intervalos heterogêneos produzem probabilidade
 de captura estritamente menor que intervalos regulares.** O motivo é
@@ -110,14 +110,14 @@ características de arrasto produzem durações da ordem de poucas a algumas hor
 Com um conjunto dessa dimensão não se estima uma distribuição; adota-se uma
 família paramétrica com suporte positivo e assimetria à direita, e **reporta-se
 o resultado como função de $D$ em vez de integrar sobre uma distribuição mal
-estimada**. A curva $P_{capt}(D)$, com $D$ variando de uma a doze horas, é mais
+estimada**. A curva $P_{\mathrm{capt}}(D)$, com $D$ variando de uma a doze horas, é mais
 informativa e mais honesta do que um número único obtido por integração sobre
 uma distribuição que os dados não sustentam.
 
 Duas ressalvas sobre a hipótese de início uniforme. Primeira: se o evento for
 deliberado, o instante de início pode não ser uniforme — um ator informado pode
 consultar efemérides públicas e escolher a janela entre passagens, o que reduz
-$P_{capt}$ abaixo do valor calculado. O modelo, nesse caso, é um limite
+$P_{\mathrm{capt}}$ abaixo do valor calculado. O modelo, nesse caso, é um limite
 superior, e vale registrar que a publicidade dos horários de passagem é, para
 esta aplicação, uma vulnerabilidade e não apenas uma conveniência. Segunda: a
 atividade marítima tem estrutura diurna e sazonal que pode correlacionar-se com
@@ -153,7 +153,7 @@ uma evidência de natureza diferente.
 ### Alvo não cooperativo
 
 Se a embarcação não transmite, ou transmite posição falsa, a trajetória só pode
-ser reconstruída a partir de observações SAR. Aqui, o teto de $P_{capt}$ aplica-
+ser reconstruída a partir de observações SAR. Aqui, o teto de $P_{\mathrm{capt}}$ aplica-
 se integralmente, e com um agravante: uma única passagem fornece posição e, pelo
 Capítulo 2, cinemática instantânea parcial via deslocamento em azimute e
 esteira — mas o Capítulo 5 estabeleceu que **ambas as vias enfraquecem em
@@ -166,7 +166,7 @@ probabilidade é substancialmente menor que a de uma:
 
 $$P_{\ge 2}(D) \;=\; \frac{\sum_k \max\!\big(0,\, \min(D, g_k + g_{k+1}) - g_k\big)}{\sum_k g_k},$$
 
-com a soma tomada sobre pares consecutivos. A queda em relação a $P_{capt}$ é
+com a soma tomada sobre pares consecutivos. A queda em relação a $P_{\mathrm{capt}}$ é
 acentuada precisamente onde os intervalos são heterogêneos.
 
 ### O que isso implica para o trabalho
@@ -193,9 +193,9 @@ Disso decorrem duas leituras, e ambas entram no Capítulo 10:
 ## Modelo completo e estudo de sensibilidade
 
 Combinando os elementos, e condicionando ao regime $r \in \{\text{coop},
-\text{n\~ao coop}\}$ e ao estrato ambiental $s$ do Capítulo 5:
+\text{não coop}\}$ e ao estrato ambiental $s$ do Capítulo 5:
 
-$$P_{det}(D \mid r, s) \;=\; \mathbb{E}_{T_0}\!\left[ 1 - \big(1 - p(r, s)\big)^{N(T_0, D)} \right],$$
+$$P_{\mathrm{det}}(D \mid r, s) \;=\; \mathbb{E}_{T_0}\!\left[ 1 - \big(1 - p(r, s)\big)^{N(T_0, D)} \right],$$
 
 com $N(T_0, D)$ o número de passagens no intervalo $[T_0, T_0+D]$, obtido da
 sequência reconstruída.
@@ -216,7 +216,7 @@ O estudo de sensibilidade percorre:
 ## O teto e o que ele implica
 
 O produto do capítulo é uma família de curvas de limite superior de revocação.
-Nenhum classificador, por melhor que seja, pode exceder $P_{det}$: o que não foi
+Nenhum classificador, por melhor que seja, pode exceder $P_{\mathrm{det}}$: o que não foi
 observado não pode ser classificado.
 
 Isso fornece um critério de leitura para a literatura da área. Um trabalho que
@@ -244,7 +244,7 @@ e possivelmente por estrutura diurna do tráfego. Ambas verificáveis.
 **Distribuição de duração mal estimada**, com base em um punhado de eventos.
 Mitigada por reportar em função de $D$ em vez de integrar.
 
-**Cobertura real ≠ cobertura catalogada.** A sequência reconstruída pressupõe
+**Cobertura real $\neq$ cobertura catalogada.** A sequência reconstruída pressupõe
 que cada aquisição catalogada seja utilizável; cenas com falha, cobertura
 parcial do corredor ou modo inadequado precisam ser excluídas antes da contagem,
 ou o teto sai otimista.
@@ -252,6 +252,6 @@ ou o teto sai otimista.
 **Independência entre passagens.** O modelo trata $p_i$ como independentes entre
 passagens dentro de uma mesma janela. A hipótese é frágil: passagens próximas no
 tempo compartilham condição de gelo e de vento, de modo que a falha de uma torna
-a falha da outra mais provável. O efeito reduz $P_{det}$ abaixo do valor
+a falha da outra mais provável. O efeito reduz $P_{\mathrm{det}}$ abaixo do valor
 calculado, o que mantém o resultado como limite superior — mas a magnitude do
 efeito deve ser estimada, e não apenas mencionada.

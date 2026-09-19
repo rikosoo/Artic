@@ -98,7 +98,8 @@ fontes e ressalvas. Em resumo: episódios árticos em 2021, 2022 e 2025, todos c
 documentação insuficiente ou cobertura de dados inadequada; e a sequência
 báltica de 2023 a 2026 — Balticconnector, os cabos associados ao *Yi Peng 3*,
 Estlink 2 e cabos vizinhos no caso *Eagle S*, o enlace Gotland–Ventspils no caso
-*Vezhen*, o cabo Elisa no caso *Fitburg*, e o enlace Letônia–Gotland de janeiro
+*Vezhen*, o cabo Elisa no caso *Fitburg* [@nbi_fitburg2026], e o enlace
+Letônia–Gotland de janeiro
 de 2026, ainda sem embarcação identificada. Some-se o caso de Taiwan, fora do
 recorte geográfico, mantido como contraste jurisdicional.
 
@@ -122,7 +123,8 @@ separado.
 
 No caso *Vezhen*, a investigação sueca estabeleceu causa mecânica — falha de
 dois dos três dispositivos de retenção, com o terceiro cedendo ao impacto de
-uma onda em horário determinado — e arquivou o caso como acidental. Trata-se,
+uma onda em horário determinado — e arquivou o caso como acidental
+[@vezhen_mp2025]. Trata-se,
 portanto, de um evento de arrasto real, com hora conhecida, **rotulado como
 negativo** quanto à hipótese deliberada.
 

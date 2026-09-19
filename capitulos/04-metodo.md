@@ -45,14 +45,14 @@ atravessar estruturas de larga escala como bordas de gelo; e a ordem da
 estatística empregada.
 
 O limiar decorre da probabilidade de falso alarme por pixel especificada,
-$P_{fa}$. Como observado no Capítulo 2, essa probabilidade é *por pixel*: para
+$P_{\mathrm{fa}}$. Como observado no Capítulo 2, essa probabilidade é *por pixel*: para
 uma cena com $N$ pixels válidos, o número esperado de falsos alarmes antes de
 qualquer pós-processamento é
 
-$$\mathbb{E}[N_{fa}] = N \cdot P_{fa},$$
+$$\mathbb{E}[N_{\mathrm{fa}}] = N \cdot P_{\mathrm{fa}},$$
 
 de modo que valores nominalmente conservadores ainda produzem centenas de
-detecções espúrias por cena. O Capítulo 5 estabelece $P_{fa}$ **por estrato de
+detecções espúrias por cena. O Capítulo 5 estabelece $P_{\mathrm{fa}}$ **por estrato de
 gelo**, e não globalmente; esta seção fixa apenas a forma do detector.
 
 O pós-processamento agrupa pixels detectados em objetos por conectividade,
@@ -79,7 +79,7 @@ baixa velocidade é justamente a condição de interesse.
 
 Um alvo com velocidade radial $v_r$ aparece deslocado em azimute de
 
-$$\Delta_{az} = \frac{R}{V}\, v_r,$$
+$$\Delta_{\mathrm{az}} = \frac{R}{V}\, v_r,$$
 
 onde $R$ é o alcance oblíquo e $V$ a velocidade da plataforma. A razão $R/V$ é
 da ordem de uma centena de segundos para um sensor orbital, de modo que
@@ -103,7 +103,8 @@ detecção $i$ e o candidato AIS $j$ como a distância de Mahalanobis entre a
 posição observada e a posição prevista, sob a covariância combinada da
 propagação AIS, da geolocalização do produto e do resíduo da correção de
 azimute. Pares cuja distância excede um limiar de *gating* são proibidos, e a
-atribuição ótima sobre a matriz restante é obtida por algoritmo húngaro.
+atribuição ótima sobre a matriz restante é obtida por algoritmo húngaro
+[@kuhn_assignment].
 
 O tratamento dos resultados distingue três situações, e a distinção importa
 porque o Capítulo 7 precisa saber de onde vêm os candidatos:
@@ -141,7 +142,7 @@ capaz de danificar o cabo.
 
 Fatoram-se três condições necessárias e aproximadamente independentes:
 
-$$R(\mathbf{x}) = w_{prof}(\mathbf{x}) \cdot w_{fundo}(\mathbf{x}) \cdot w_{tra\varsigma}(\mathbf{x}).$$
+$$R(\mathbf{x}) = w_{\mathrm{prof}}(\mathbf{x}) \cdot w_{\mathrm{fundo}}(\mathbf{x}) \cdot w_{\mathrm{traç}}(\mathbf{x}).$$
 
 Note-se que a viabilidade cinemática **não** aparece aqui, embora estivesse
 prevista na formulação inicial do projeto. A razão é de coerência semântica:
@@ -167,14 +168,14 @@ padronizado.
 A profundidade máxima em que uma dada embarcação pode produzir arrasto efetivo é
 portanto
 
-$$d_{max} = \frac{L}{s}.$$
+$$d_{\mathrm{max}} = \frac{L}{s}.$$
 
 Como $L$ varia com a classe e o porte da embarcação e $s$ tem alguma dispersão,
-$d_{max}$ é uma variável aleatória sobre a **população de embarcações que
+$d_{\mathrm{max}}$ é uma variável aleatória sobre a **população de embarcações que
 efetivamente transita no corredor**. A componente de profundidade é a função de
 sobrevivência dessa variável:
 
-$$w_{prof}^{0}(d) = \Pr\left( \frac{L}{s} \ge d \right) = 1 - F_{d_{max}}(d).$$
+$$w_{\mathrm{prof}}^{0}(d) = \Pr\left( \frac{L}{s} \ge d \right) = 1 - F_{d_{\mathrm{max}}}(d).$$
 
 Esta é a diferença essencial em relação ao limiar fixo: a curva não é postulada,
 é **estimada a partir da composição real da frota** no corredor, que o AIS
@@ -185,7 +186,8 @@ representa risco diferente nos dois casos.
 As ordens de grandeza envolvidas merecem registro, porque já indicam que o
 resultado da derivação não coincide com o limiar usualmente adotado. A amarra é
 medida em quartéis de 27,5 m, e navios mercantes portam algo entre dez e treze
-quartéis por âncora, o que situa $L$ na casa das poucas centenas de metros. Com
+quartéis por âncora, o que situa $L$ na casa das poucas centenas de metros
+[@amarra_pratica]. Com
 as relações de amarra de 5:1 a 7:1 recomendadas para fundeio, a profundidade
 máxima de fundeio projetada para a maior parte da frota mercante fica em torno
 de 80 a 100 m, e o fundeio comercial efetivo raramente ultrapassa algumas
@@ -201,7 +203,7 @@ interesse aqui é diferente e menos exigente: basta que a âncora alcance o leit
 e disponha de amarra suficiente para engatar e arrastar, o que ocorre com
 relações menores. O valor de $s$ apropriado para *arrasto capaz de causar dano*
 não está estabelecido na literatura com a mesma firmeza que o valor para
-fundeio, e é sobre ele que a curva $w_{prof}^{0}$ é mais sensível. Trata-se $s$,
+fundeio, e é sobre ele que a curva $w_{\mathrm{prof}}^{0}$ é mais sensível. Trata-se $s$,
 por isso, como variável aleatória com distribuição declaradamente incerta, e
 reporta-se a sensibilidade de $\rho$ e do desempenho à sua especificação — em
 vez de escolher um número e apresentá-lo como estabelecido.
@@ -210,7 +212,7 @@ Resta incorporar a incerteza batimétrica. Sendo $p(d \mid \mathbf{x})$ a
 distribuição da profundidade verdadeira em $\mathbf{x}$, dada a célula da grade
 e sua incerteza vertical,
 
-$$w_{prof}(\mathbf{x}) = \int_{0}^{\infty} w_{prof}^{0}(d) \; p(d \mid \mathbf{x}) \; \mathrm{d}d .$$
+$$w_{\mathrm{prof}}(\mathbf{x}) = \int_{0}^{\infty} w_{\mathrm{prof}}^{0}(d) \; p(d \mid \mathbf{x}) \; \mathrm{d}d .$$
 
 A convolução resolve o problema levantado no Capítulo 3: a fronteira do corredor
 deixa de ser uma isolinha da grade batimétrica — que seria em parte artefato de
@@ -223,7 +225,7 @@ produto em vez de ser escondida por ele.
 
 A capacidade de engate depende do substrato: fundos moles permitem penetração,
 enquanto fundo rochoso tende a fazer a âncora resvalar. A componente
-$w_{fundo}$ atribui peso conforme a classe de substrato obtida de cartografia
+$w_{\mathrm{fundo}}$ atribui peso conforme a classe de substrato obtida de cartografia
 pública de habitats de fundo.
 
 Esta é reconhecidamente a componente mais frágil das três. A cartografia
@@ -231,7 +233,7 @@ disponível é grosseira, frequentemente interpolada a partir de amostragem
 esparsa, e a relação entre classe de substrato e comportamento de âncora é
 qualitativa. Além disso, o efeito é ambíguo quanto ao dano: uma âncora que
 resvala sobre rocha penetra menos, mas não é por isso inofensiva a um cabo
-exposto. Por essa razão, $w_{fundo}$ é implementada de forma conservadora —
+exposto. Por essa razão, $w_{\mathrm{fundo}}$ é implementada de forma conservadora —
 sem zerar região alguma — e **é objeto de ablação explícita no Capítulo 9**. Se
 sua remoção não alterar o desempenho, o resultado honesto é declarar que a
 contribuição é de profundidade e traçado, não de substrato.
@@ -240,19 +242,19 @@ contribuição é de profundidade e traçado, não de substrato.
 
 Seja $r(\mathbf{x})$ a distância de $\mathbf{x}$ ao traçado publicado. A posição
 verdadeira do cabo difere da publicada por um deslocamento transversal $\epsilon$
-que se modela como gaussiano de desvio $\sigma_{tra\varsigma}$. Sendo $a$ a
+que se modela como gaussiano de desvio $\sigma_{\mathrm{traç}}$. Sendo $a$ a
 meia-largura da faixa efetivamente varrida por uma âncora em arrasto,
 
-$$w_{tra\varsigma}(\mathbf{x}) = \Pr\big( |r(\mathbf{x}) - \epsilon| \le a \big).$$
+$$w_{\mathrm{traç}}(\mathbf{x}) = \Pr\big( |r(\mathbf{x}) - \epsilon| \le a \big).$$
 
-Como $\sigma_{tra\varsigma}$ é de ordens de grandeza superior a $a$, o resultado
+Como $\sigma_{\mathrm{traç}}$ é de ordens de grandeza superior a $a$, o resultado
 aproxima-se de
 
-$$w_{tra\varsigma}(\mathbf{x}) \approx \frac{2a}{\sigma_{tra\varsigma}} \, \phi\!\left( \frac{r(\mathbf{x})}{\sigma_{tra\varsigma}} \right),$$
+$$w_{\mathrm{traç}}(\mathbf{x}) \approx \frac{2a}{\sigma_{\mathrm{traç}}} \, \phi\!\left( \frac{r(\mathbf{x})}{\sigma_{\mathrm{traç}}} \right),$$
 
 com $\phi$ a densidade normal padrão. O perfil transversal do corredor é,
 portanto, **a própria densidade da incerteza do traçado**, e sua largura efetiva
-é determinada por $\sigma_{tra\varsigma}$ — não por uma escolha do analista.
+é determinada por $\sigma_{\mathrm{traç}}$ — não por uma escolha do analista.
 
 Esse resultado formaliza a conclusão do orçamento de incerteza do Capítulo 3:
 não há corredor mais estreito que a ignorância sobre onde o cabo está. Um
@@ -261,11 +263,11 @@ mesmo tempo, o corredor assim definido é enormemente mais restritivo que um
 *buffer* fixo generoso, porque decai suavemente em vez de terminar em uma borda
 arbitrária, e porque é multiplicado pelas outras duas componentes.
 
-A estimativa de $\sigma_{tra\varsigma}$ é ela própria um problema, já que os
+A estimativa de $\sigma_{\mathrm{traç}}$ é ela própria um problema, já que os
 operadores não publicam a incerteza de seus traçados. Adota-se a estratégia de
 tratá-la como parâmetro e reportar os resultados como função dela, em vez de
 fixar um valor não fundamentado — a sensibilidade do desempenho a
-$\sigma_{tra\varsigma}$ é um resultado do Capítulo 9.
+$\sigma_{\mathrm{traç}}$ é um resultado do Capítulo 9.
 
 ### Redução do espaço de busca
 
@@ -324,15 +326,16 @@ limiar; é estrutural.
 
 ### Razão de verossimilhança
 
-Adota-se como saída a razão de verossimilhança entre as duas hipóteses:
+Adota-se como saída a razão de verossimilhança entre as duas hipóteses, na forma
+consagrada pela avaliação de evidência em contexto forense [@aitken_forense]:
 
-$$\Lambda(\mathbf{o}) = \frac{p(\mathbf{o} \mid H_{arrasto})}{p(\mathbf{o} \mid H_{rotina})},$$
+$$\Lambda(\mathbf{o}) = \frac{p(\mathbf{o} \mid H_{\mathrm{arrasto}})}{p(\mathbf{o} \mid H_{\mathrm{rotina}})},$$
 
 onde $\mathbf{o}$ reúne os descritores cinemáticos, o perfil de $R$ ao longo da
 trajetória, o estado de correspondência AIS e as covariáveis ambientais. Sob a
 regra de Bayes em forma de razão de chances,
 
-$$\underbrace{\frac{\Pr(H_{arrasto} \mid \mathbf{o})}{\Pr(H_{rotina} \mid \mathbf{o})}}_{\text{chance posterior}} = \Lambda(\mathbf{o}) \cdot \underbrace{\frac{\Pr(H_{arrasto})}{\Pr(H_{rotina})}}_{\text{chance a priori}} .$$
+$$\underbrace{\frac{\Pr(H_{\mathrm{arrasto}} \mid \mathbf{o})}{\Pr(H_{\mathrm{rotina}} \mid \mathbf{o})}}_{\text{chance posterior}} = \Lambda(\mathbf{o}) \cdot \underbrace{\frac{\Pr(H_{\mathrm{arrasto}})}{\Pr(H_{\mathrm{rotina}})}}_{\text{chance a priori}} .$$
 
 A separação é o ponto. **O sistema estima $\Lambda$; ele não estima a chance a
 priori, e não deve fingir que estima.** A prevalência do fenômeno é uma

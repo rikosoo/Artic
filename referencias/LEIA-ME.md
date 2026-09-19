@@ -6,11 +6,15 @@ original antes da qualificação.
 
 ## Estilo de citação
 
-O `metadata.yaml` aponta para `referencias/abnt.csl`, que não está versionado.
-Baixe do repositório oficial de estilos CSL (`citation-style-language/styles`)
-o arquivo `associacao-brasileira-de-normas-tecnicas.csl` e salve-o aqui como
-`abnt.csl` — ou ajuste o campo `csl:` do `metadata.yaml` para o estilo exigido
-pelo seu programa de pós-graduação.
+`abnt.csl` — cópia versionada do estilo
+`associacao-brasileira-de-normas-tecnicas.csl` do repositório oficial de
+estilos CSL (`citation-style-language/styles`), para onde o campo `csl:` do
+`metadata.yaml` aponta. Substitua-o caso seu programa de pós-graduação exija
+outro estilo.
+
+Vale notar que várias entradas marcadas com `% VERIFICAR` estão sem o campo
+`year`, e a bibliografia compilada as apresenta como `[S.d.]`. Preencher as
+datas é parte da conferência contra a fonte original.
 
 ## A preencher
 

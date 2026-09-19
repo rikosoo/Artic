@@ -136,7 +136,8 @@ informação declarada pelo próprio suspeito.
 
 Este confundidor não constava do planejamento inicial e foi identificado a
 partir do caso *Vezhen*, documentado no Capítulo 8. O Ministério Público sueco
-arquivou o caso como acidental: dos três dispositivos de retenção da âncora,
+arquivou o caso como acidental [@vezhen_mp2025]: dos três dispositivos de
+retenção da âncora,
 dois estavam inoperantes havia tempo, e o terceiro cedeu ao impacto de uma onda
 em horário determinado. A âncora caiu sem qualquer ação da tripulação.
 
@@ -209,12 +210,12 @@ e é aqui que isso se torna quantitativo.
 
 O número esperado de falsos positivos por período é, aproximadamente,
 
-$$\mathbb{E}[FP] \;\approx\; \underbrace{\lambda_{fa}(c, w, m)}_{\text{Capítulo 5}} \times \underbrace{A_{ef}}_{\text{Capítulo 4}} \times \; N_{pass},$$
+$$\mathbb{E}[FP] \;\approx\; \underbrace{\lambda_{\mathrm{fa}}(c, w, m)}_{\text{Capítulo 5}} \times \underbrace{A_{\mathrm{ef}}}_{\text{Capítulo 4}} \times \; N_{\mathrm{pass}},$$
 
-com $\lambda_{fa}$ a densidade de falso alarme por área medida por estrato e
-$A_{ef} = \int R(\mathbf{x})\,\mathrm{d}\mathbf{x}$ a área efetiva do corredor.
+com $\lambda_{\mathrm{fa}}$ a densidade de falso alarme por área medida por estrato e
+$A_{\mathrm{ef}} = \int R(\mathbf{x})\,\mathrm{d}\mathbf{x}$ a área efetiva do corredor.
 
-A Contribuição 1 reduz $A_{ef}$ em ordens de grandeza sem remover eventos
+A Contribuição 1 reduz $A_{\mathrm{ef}}$ em ordens de grandeza sem remover eventos
 genuínos — porque, por argumento físico, eles não ocorrem fora do suporte de
 $R$. É uma redução do denominador da prevalência que não afeta o numerador, e
 portanto **aumenta a prevalência dentro da região observada**. É esse o
@@ -223,7 +224,7 @@ que ele é mais eficaz do que qualquer refinamento do classificador: mover $\pi$
 de $10^{-5}$ para $10^{-3}$ vale mais que duas ordens de grandeza de melhoria em
 especificidade, e é mais fácil de conseguir.
 
-A Contribuição 2 caracteriza $\lambda_{fa}$ e mostra sob que condições ele
+A Contribuição 2 caracteriza $\lambda_{\mathrm{fa}}$ e mostra sob que condições ele
 cresce a ponto de anular o ganho anterior. As duas se encontram nesta
 multiplicação, e o Capítulo 9 reporta o produto.
 
