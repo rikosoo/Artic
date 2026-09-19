@@ -7,7 +7,7 @@ reposiciona toda a contribuição deste trabalho, e convém enunciá-lo com
 precisão, porque a imprecisão nesse ponto é comum e consequente.
 
 A Convenção das Nações Unidas sobre o Direito do Mar dedica ao tema um conjunto
-reduzido de dispositivos [@unclos]. O central é o artigo 113, que obriga cada
+reduzido de dispositivos [@unclos; @davenport2018]. O central é o artigo 113, que obriga cada
 Estado a **adotar legislação** tipificando como infração o rompimento ou dano a
 cabo submarino, doloso ou por negligência culpável, praticado por navio que
 arvore sua bandeira ou por pessoa sujeita à sua jurisdição. A estrutura da
@@ -29,13 +29,13 @@ bandeira tem capacidade e disposição para processar. Quando o navio arvora
 bandeira de conveniência, sem vínculo substancial com o armador nem interesse na
 persecução, a obrigação do artigo 113 permanece formalmente atendida e
 materialmente vazia. É a essa configuração que a literatura recente se refere
-como lacuna de persecução [@ejiltalk_lacuna].
+como lacuna de persecução [@ejiltalk_lacuna; @lott_baltico2025].
 
 **Detectar não confere legitimidade para agir.** Ainda que o sistema proposto
 neste trabalho funcionasse perfeitamente — identificando a embarcação, a
 trajetória e o instante —, o Estado costeiro não passaria a dispor, por isso, de
-base jurídica para interceptar, abordar ou processar. A evidência não cria
-competência.
+base jurídica para interceptar, abordar ou processar [@lieber_clion]. A evidência
+não cria competência.
 
 ## A lacuna de persecução, demonstrada empiricamente
 
@@ -52,14 +52,16 @@ finlandesa não podia ser aplicada, dadas as restrições decorrentes da Conven�
 porque os fatos ocorreram na zona econômica exclusiva e fora do mar territorial
 [@eagles_helsinque2025; @ejiltalk_eagles]. O Estado foi ainda condenado a
 ressarcir custas aos réus. A decisão foi objeto de recurso pela acusação e,
-até a redação deste texto, encontra-se pendente no tribunal de apelação — de
+até a redação deste texto, encontra-se pendente no tribunal de apelação
+[@eagles_recurso2026] — de
 modo que a questão jurídica central permanece em aberto e esta seção pode
 precisar de atualização.
 
 O contraste com o caso de Taiwan, mantido no conjunto por essa exata razão, é
 instrutivo. Conduta materialmente equivalente — entrada deliberada em zona
 proibida de fundeio, arrasto de amarra longa, rompimento de cabo — resultou em
-condenação penal, com pena privativa de liberdade e indenização. A diferença
+condenação penal, com pena privativa de liberdade e indenização
+[@tainan_hongtai2025]. A diferença
 determinante não foi a qualidade da evidência nem a gravidade da conduta: foi o
 espaço marítimo. Em águas sob jurisdição plena do Estado costeiro, a persecução
 funcionou; na zona econômica exclusiva, não.
@@ -80,7 +82,7 @@ não encontrando evidência de dolo ou de negligência grave suficiente para
 sustentar responsabilidade penal — ainda que a acusação sustentasse que o estado
 de manutenção do navio tornava o evento previsível. Some-se a isso o
 arquivamento do caso *Vezhen* pelo Ministério Público sueco, também por causa
-mecânica estabelecida.
+mecânica estabelecida [@vezhen_mp2025].
 
 Dois dos casos mais visíveis do conjunto foram, portanto, apreciados por
 autoridades distintas, em jurisdições distintas, e ambos qualificados como

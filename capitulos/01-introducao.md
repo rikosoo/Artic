@@ -89,7 +89,7 @@ Ela não procede, contudo, para o tráfego que motiva este trabalho, e a diferen
 A comparação mais expressiva é pontual: a capacidade reivindicada para a maior
 constelação em órbita baixa em operação é da ordem de algumas dezenas de
 terabits por segundo — comparável à de **um único par de fibras** de um cabo
-transatlântico moderno [@subseacables_porque]. Projeções de crescimento
+transatlântico moderno [@subseacables_porque; @telegeography_mitos]. Projeções de crescimento
 apontam para valores substancialmente maiores ao longo desta década, mas
 projeções não são capacidade instalada, e a distância a cobrir permanece de duas
 a três ordens de grandeza.

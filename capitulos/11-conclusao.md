@@ -91,7 +91,7 @@ revisita anunciados de poucas horas — e, em alguns casos e faixas de latitude,
 inferiores a uma hora [@umbra_eoportal; @capella_const; @iceye_fleet]. A
 comparação com a duração dos eventos é o ponto: se a duração característica de
 um arrasto está na faixa de poucas a algumas horas, e a cadência de observação
-cai para essa mesma ordem ou abaixo dela, então $P_{capt}$ satura e **o teto do
+cai para essa mesma ordem ou abaixo dela, então $P_{\mathrm{capt}}$ satura e **o teto do
 Capítulo 6 deixa de ser o fator limitante no regime não cooperativo**. A
 pergunta se desloca de "o evento foi observado?" para "o que foi observado
 permite classificar?", que é o domínio dos Capítulos 5 e 7.

@@ -147,7 +147,7 @@ número agregado que não corresponde a nenhuma população real.
 A métrica primária é a **densidade de falso alarme** — número de detecções
 espúrias por unidade de área — medida nas células de controle:
 
-$$\lambda_{fa}(c, w, m) = \frac{\mathbb{E}[N_{det}]}{A},$$
+$$\lambda_{\mathrm{fa}}(c, w, m) = \frac{\mathbb{E}[N_{\mathrm{det}}]}{A},$$
 
 para o estrato definido por concentração $c$, vento $w$ e configuração $m$.
 
@@ -163,7 +163,7 @@ Contribuição 1 reduz. As duas contribuições encontram-se nessa multiplicaç�
 
 O resultado principal do capítulo tem duas formas.
 
-A primeira é a **curva de degradação**: $\lambda_{fa}$ em função da concentração
+A primeira é a **curva de degradação**: $\lambda_{\mathrm{fa}}$ em função da concentração
 de gelo, a limiar fixo, com o eixo de vento como família de curvas. Ela mostra
 o quanto o detector se afasta de sua taxa nominal quando a premissa de mar
 aberto é violada.
@@ -173,7 +173,7 @@ densidade de falso alarme em um valor de referência — o que exige elevar o
 limiar à medida que a concentração de gelo cresce —, mede-se a revocação
 resultante sobre a verdade positiva parcial. Define-se
 
-$$\tau(c) = -\frac{\partial\, \text{revocação}}{\partial c} \bigg|_{\lambda_{fa}\, \text{fixo}},$$
+$$\tau(c) = -\frac{\partial\, \text{revocação}}{\partial c} \bigg|_{\lambda_{\mathrm{fa}}\, \text{fixo}},$$
 
 isto é, quanta capacidade de detecção é preciso entregar para manter a precisão
 constante à medida que o gelo aumenta. Essa é a grandeza que um operador precisa
@@ -187,7 +187,7 @@ Reportadas por estrato, nunca agregadas. Conforme o protocolo fixado no Capítul
 
 ## Mitigações avaliadas
 
-Cada mitigação é avaliada pelo mesmo critério: quanto reduz $\lambda_{fa}$ e
+Cada mitigação é avaliada pelo mesmo critério: quanto reduz $\lambda_{\mathrm{fa}}$ e
 quanto custa em revocação ou em cobertura. Nenhuma é adotada por reduzir falso
 alarme isoladamente.
 

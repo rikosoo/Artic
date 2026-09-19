@@ -71,6 +71,8 @@ em qualificação:
 ```
 metadata.yaml            Metadados do documento (título, formatação, bibliografia)
 capitulos/               Um arquivo por capítulo, na ordem de numeração
+                         (00 = pré-textual, 01–11 = capítulos, 99 = referências)
+dissertacao.md           Texto inteiro em um único arquivo — GERADO, não editar
 figuras/                 Figuras geradas (versionadas)
 dados/bruto/             Dados baixados — NÃO versionado
 dados/processado/        Produtos intermediários — NÃO versionado
@@ -82,35 +84,46 @@ docs/                    Planejamento, casos de validação e pré-registro
 ## Compilação
 
 ```
-make pdf      # build/dissertacao.pdf (requer pandoc + xelatex)
-make docx     # build/dissertacao.docx (para revisão com o orientador)
-make tex      # build/dissertacao.tex (ponto de partida para migrar a abnTeX2)
-make contagem # contagem de palavras por capítulo
+make pdf       # build/dissertacao.pdf (requer pandoc + xelatex)
+make docx      # build/dissertacao.docx (para revisão com o orientador)
+make tex       # build/dissertacao.tex (ponto de partida para migrar a abnTeX2)
+make unico     # dissertacao.md — texto inteiro em um único arquivo Markdown
+make pdf-unico # build/dissertacao-completa.pdf, a partir do arquivo único
+make contagem  # contagem de palavras por capítulo
 ```
 
-Os capítulos 4 a 10 usam notação matemática em LaTeX, o que torna o alvo `pdf`
-dependente de xelatex. A exportação `docx` converte as equações para OMML e é
-adequada para revisão.
+Os capítulos 4 a 10 usam notação matemática em LaTeX, o que torna os alvos de
+PDF dependentes de xelatex. A exportação `docx` converte as equações para OMML
+e é adequada para revisão.
 
-Antes da primeira compilação é preciso baixar `referencias/abnt.csl` — ver
-`referencias/LEIA-ME.md`.
+**Arquivo único.** `make unico` concatena `metadata.yaml` e todos os arquivos de
+`capitulos/` em `dissertacao.md`, autocontido e compilável sozinho — é o formato
+para enviar a terceiros, submeter a revisão ou versionar como instantâneo. O
+arquivo é gerado por `codigo/montar-dissertacao.sh`: edite sempre os capítulos e
+regenere, nunca o arquivo único. `make pdf-unico` produz o PDF correspondente.
+
+A ordem de montagem segue a numeração dos arquivos, de modo que o material
+pré-textual (`00-pretextual.md`: resumo, abstract, lista de siglas e lista de
+símbolos) e a seção de referências (`99-referencias.md`) entram automaticamente
+em todos os alvos, inclusive nos antigos.
 
 ## Estado
 
-Texto completo: **~25.700 palavras**, 55 entradas bibliográficas.
+Texto completo: **~27.600 palavras**, 55 entradas bibliográficas, todas citadas.
 
 | Capítulo | Estado | Palavras |
 |---|---|---|
-| 1 Introdução | Redigido | 2.554 |
-| 2 Fundamentação | Redigido | 3.698 |
-| 3 Dados | Redigido | 3.096 |
-| 4 Método | Redigido | 2.991 |
+| 0 Pré-textual (resumo, abstract, siglas, símbolos) | Redigido | 1.924 |
+| 1 Introdução | Redigido | 2.555 |
+| 2 Fundamentação | Redigido | 3.699 |
+| 3 Dados | Redigido | 3.106 |
+| 4 Método | Redigido | 3.004 |
 | 5 Clutter de gelo | Redigido | 2.066 |
-| 6 Revisita | Redigido | 2.025 |
-| 7 Falsos positivos | Redigido | 2.622 |
-| 8 Rótulos e validação | Redigido | 1.768 |
+| 6 Revisita | Redigido | 2.026 |
+| 7 Falsos positivos | Redigido | 2.623 |
+| 8 Rótulos e validação | Redigido | 1.770 |
 | 9 Resultados | **Estrutura sem valores** | 1.590 |
-| 10 Discussão | Redigido | 1.892 |
+| 10 Discussão | Redigido | 1.898 |
 | 11 Conclusão | Redigido | 1.382 |
 
 O Capítulo 9 especifica 21 figuras e 10 tabelas com eixos, unidades e

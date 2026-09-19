@@ -133,7 +133,7 @@ do modelo do Capítulo 6.
 ### O detector CFAR
 
 A família de detectores CFAR (*Constant False Alarm Rate*) domina a detecção de
-alvos pontuais em SAR. O princípio é local e adaptativo: para cada pixel sob
+alvos pontuais em SAR [@crisp2004]. O princípio é local e adaptativo: para cada pixel sob
 teste, estima-se a estatística do clutter a partir de uma janela de referência
 que o circunda, separada por células de guarda destinadas a impedir que energia
 do próprio alvo contamine a estimativa; o limiar de decisão é então calculado de
@@ -174,7 +174,7 @@ sistemática, e não ocasional:
 Há ainda um ponto aritmético que costuma ser subestimado e que conecta este
 capítulo diretamente ao Capítulo 7: a probabilidade de falso alarme do CFAR é
 definida **por pixel**. Uma cena de faixa larga contém tipicamente centenas de
-milhões de pixels, de modo que mesmo uma taxa nominal da ordem de 10⁻⁶ produz
+milhões de pixels, de modo que mesmo uma taxa nominal da ordem de $10^{-6}$ produz
 centenas de falsos alarmes por cena antes de qualquer filtragem. O número de
 detecções brutas nunca é o número de embarcações, e a distância entre os dois é
 onde reside a maior parte do trabalho de engenharia — e do risco metodológico.

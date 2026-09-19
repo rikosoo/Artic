@@ -40,12 +40,12 @@ caso muda-se a área, não o método.
 ## Caracterização do corredor de risco
 
 **Figura 9.2 — Componentes do campo de risco.** Painéis lado a lado para um
-trecho representativo: batimetria, $w_{prof}$, $w_{fundo}$, $w_{tra\varsigma}$ e
+trecho representativo: batimetria, $w_{\mathrm{prof}}$, $w_{\mathrm{fundo}}$, $w_{\mathrm{traç}}$ e
 o produto $R(\mathbf{x})$, sobre a mesma extensão geográfica, com um *buffer*
 convencional sobreposto para comparação visual.
 
 **Figura 9.3 — Curva de alcance da frota.** A função de sobrevivência
-$w_{prof}^{0}(d)$ estimada a partir da composição real de tráfego no corredor,
+$w_{\mathrm{prof}}^{0}(d)$ estimada a partir da composição real de tráfego no corredor,
 com bandas de incerteza refletindo a dispersão da relação de amarra $s$. É o
 resultado que substitui o limiar postulado de profundidade por uma quantidade
 derivada.
@@ -56,7 +56,7 @@ fundeio de projeto da frota mercante. Se não cair, a componente perde
 justificativa física e o resultado deve ser reportado como tal.
 
 **Tabela 9.2 — Redução do espaço de busca.** Valor de $\rho$ — razão entre a
-área do *buffer* convencional e a área efetiva $A_{ef}$ — por recorte e para
+área do *buffer* convencional e a área efetiva $A_{\mathrm{ef}}$ — por recorte e para
 uma faixa de meias-larguras convencionais, com a decomposição de quanto cada
 componente contribui para a redução.
 
@@ -65,19 +65,19 @@ uma ordem de grandeza enfraqueceria substancialmente a primeira contribuição, 
 esse resultado deve ser reportado sem atenuação caso ocorra.
 
 **Figura 9.4 — Sensibilidade à incerteza do traçado.** $\rho$ e a largura
-efetiva do corredor em função de $\sigma_{tra\varsigma}$, que não é conhecida e
+efetiva do corredor em função de $\sigma_{\mathrm{traç}}$, que não é conhecida e
 é tratada como parâmetro. Delimita a região de valores em que a contribuição se
 sustenta.
 
 ## Desempenho do detector por estrato
 
-**Figura 9.5 — Curva de degradação.** Densidade de falso alarme $\lambda_{fa}$
+**Figura 9.5 — Curva de degradação.** Densidade de falso alarme $\lambda_{\mathrm{fa}}$
 em função da concentração de gelo, a limiar fixo, com o vento como família de
 curvas, medida nas células de controle do Capítulo 5. Barras de incerteza
 refletindo a população de cada estrato.
 
 **Figura 9.6 — Taxa de troca.** Revocação sobre a verdade positiva parcial em
-função da concentração de gelo, mantida $\lambda_{fa}$ constante. É o resultado
+função da concentração de gelo, mantida $\lambda_{\mathrm{fa}}$ constante. É o resultado
 operacionalmente mais útil do capítulo: quanta capacidade de detecção é preciso
 entregar para manter a precisão à medida que o gelo aumenta.
 
@@ -86,7 +86,7 @@ entregar para manter a precisão à medida que o gelo aumenta.
 explicitadas, antes de qualquer agregação.
 
 **Tabela 9.4 — Mitigações.** Para cada mitigação do Capítulo 5: redução em
-$\lambda_{fa}$, custo em revocação, custo em cobertura — esta última como
+$\lambda_{\mathrm{fa}}$, custo em revocação, custo em cobertura — esta última como
 fração do corredor *e* como fração dos trânsitos excluídos — e aplicabilidade,
 isto é, fração do acervo em que a mitigação pode ser usada.
 
@@ -103,7 +103,7 @@ $w^{*}$ na configuração $m$; acima disso, não.
 
 ## Probabilidade de detecção
 
-**Figura 9.8 — Probabilidade de captura.** $P_{capt}$ em função da duração do
+**Figura 9.8 — Probabilidade de captura.** $P_{\mathrm{capt}}$ em função da duração do
 evento, de uma a doze horas, calculada pela expressão exata sobre os intervalos
 reconstruídos, com a aproximação por revisita média sobreposta. **A distância
 entre as duas curvas é o resultado**, e não um detalhe de método.
@@ -113,7 +113,7 @@ probabilidade de captura, no mesmo eixo de latitude, exibindo o ganho por
 convergência orbital e a perda por agrupamento — porque é o balanço entre os
 dois que importa.
 
-**Figura 9.10 — Teto de revocação por regime.** $P_{det}$ para os regimes
+**Figura 9.10 — Teto de revocação por regime.** $P_{\mathrm{det}}$ para os regimes
 cooperativo e não cooperativo, por estrato de gelo, sem agregação. Inclui
 $P_{\ge 2}$ para o caso não cooperativo em gelo, onde a classificação tende a
 exigir duas passagens.
