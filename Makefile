@@ -1,7 +1,9 @@
 CAPITULOS := $(sort $(wildcard capitulos/*.md))
+CAPS_REV  := $(sort $(wildcard capitulos-revisados/*.md))
 BIB       := referencias/referencias.bib
 META      := metadata.yaml
 UNICO     := dissertacao.md
+UNICO_REV := dissertacao-revisada.md
 SAIDA     := build
 
 PANDOC_FLAGS := --citeproc \
@@ -9,7 +11,7 @@ PANDOC_FLAGS := --citeproc \
                 --number-sections \
                 --toc
 
-.PHONY: all pdf docx tex unico pdf-unico limpar contagem
+.PHONY: all pdf docx tex unico pdf-unico revisada pdf-revisada limpar contagem
 all: pdf
 
 $(SAIDA):
@@ -42,8 +44,21 @@ pdf-unico: $(UNICO) $(SAIDA)
 		--pdf-engine=xelatex \
 		-o $(SAIDA)/dissertacao-completa.pdf
 
+# --- Versão revisada -------------------------------------------------------
+# Mesmo conteúdo técnico, reescrito sem travessão, sem meia-risca e com os
+# demais maneirismos de redação automática removidos. Ver README.
+revisada: $(UNICO_REV)
+
+$(UNICO_REV): $(META) $(CAPS_REV) codigo/montar-dissertacao.sh
+	./codigo/montar-dissertacao.sh $(UNICO_REV) capitulos-revisados
+
+pdf-revisada: $(UNICO_REV) $(SAIDA)
+	pandoc $(UNICO_REV) $(PANDOC_FLAGS) \
+		--pdf-engine=xelatex \
+		-o $(SAIDA)/dissertacao-revisada.pdf
+
 contagem:
 	@wc -w $(CAPITULOS) | sort -n
 
 limpar:
-	rm -rf $(SAIDA) $(UNICO)
+	rm -rf $(SAIDA) $(UNICO) $(UNICO_REV)

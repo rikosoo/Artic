@@ -71,8 +71,11 @@ em qualificação:
 ```
 metadata.yaml            Metadados do documento (título, formatação, bibliografia)
 capitulos/               Um arquivo por capítulo, na ordem de numeração
-                         (00 = pré-textual, 01–11 = capítulos, 99 = referências)
-dissertacao.md           Texto inteiro em um único arquivo — GERADO, não editar
+                         (00 = pré-textual, 01-11 = capítulos, 99 = referências)
+capitulos-revisados/     Os mesmos capítulos, reescritos sem marcas de redação
+                         automática (ver "Duas versões do texto")
+dissertacao.md           Texto inteiro em um único arquivo - GERADO, não editar
+dissertacao-revisada.md  Idem, a partir de capitulos-revisados/ - GERADO
 figuras/                 Figuras geradas (versionadas)
 dados/bruto/             Dados baixados — NÃO versionado
 dados/processado/        Produtos intermediários — NÃO versionado
@@ -87,8 +90,10 @@ docs/                    Planejamento, casos de validação e pré-registro
 make pdf       # build/dissertacao.pdf (requer pandoc + xelatex)
 make docx      # build/dissertacao.docx (para revisão com o orientador)
 make tex       # build/dissertacao.tex (ponto de partida para migrar a abnTeX2)
-make unico     # dissertacao.md — texto inteiro em um único arquivo Markdown
+make unico     # dissertacao.md, texto inteiro em um único arquivo Markdown
 make pdf-unico # build/dissertacao-completa.pdf, a partir do arquivo único
+make revisada     # dissertacao-revisada.md
+make pdf-revisada # build/dissertacao-revisada.pdf
 make contagem  # contagem de palavras por capítulo
 ```
 
@@ -106,6 +111,39 @@ A ordem de montagem segue a numeração dos arquivos, de modo que o material
 pré-textual (`00-pretextual.md`: resumo, abstract, lista de siglas e lista de
 símbolos) e a seção de referências (`99-referencias.md`) entram automaticamente
 em todos os alvos, inclusive nos antigos.
+
+## Duas versões do texto
+
+O repositório carrega o mesmo texto em duas redações.
+
+`capitulos/` é a redação original. `capitulos-revisados/` é uma reescrita
+integral com o mesmo conteúdo técnico, as mesmas seções, as mesmas equações e
+as mesmas citações, da qual foram retirados os traços estilísticos que denunciam
+redação assistida por modelo de linguagem:
+
+| Marcador | Original | Revisada |
+|---|---|---|
+| Travessão (—) | 317 | 0 |
+| Meia-risca (–) | 32 | 0 |
+| "precisamente / justamente / exatamente" | 41 | 1 |
+| Parágrafos abrindo em negrito | 133 | 60 |
+
+A revisão também desfez o encadeamento repetitivo de frase longa seguida de
+fragmento curto, reduziu as tríades e retirou o comentário do texto sobre as
+próprias virtudes. As 60 aberturas em negrito que restam são chamadas de figura
+e de tabela do Capítulo 9 e os rótulos de contribuição do Capítulo 11, que são
+convenção de dissertação e não maneirismo.
+
+Duas redações do mesmo trabalho é um arranjo transitório, mantido para
+comparação. Escolhida uma delas, a outra deve ser removida, para que exista uma
+única fonte de verdade.
+
+Permanecem quatro travessões na bibliografia compilada, todos dentro de títulos
+de obras publicadas ("New Threats—Old Rules", "Satellite AIS — Developing
+Technology or Existing Capability?", "Kingfisher Information Service — Offshore
+Renewable and Cable Awareness"). Alterar o título de uma obra citada é erro de
+citação, e por isso foram preservados. As meias-riscas restantes são intervalos
+de página da bibliografia, convenção universal do BibTeX.
 
 ## Estado
 
